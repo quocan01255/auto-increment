@@ -1,4 +1,15 @@
 const axios = require('axios');
+const express = require('express');
+const port = 4000;
+const app = express();
+
+app.get('/', (req, res) => {
+    res.send('Automating...');
+})
+
+app.listen(port, () => {
+    console.log(`App listening on port ${port}`);
+})
 
 // Địa chỉ API mà bạn muốn gọi
 const apiUrl = 'https://www.kucoin.com/_api/xkucoin/platform-telebot/game/gold/increase?lang=en_US';
